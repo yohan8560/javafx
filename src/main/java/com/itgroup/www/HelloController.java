@@ -11,7 +11,7 @@ public class HelloController {
     protected void onHelloButtonClick() {
         // 오늘은 날씨가 너무 너무 더웡진짜로
         // 오늘 점심은 부대찌개 먹을꺼얌
-        // 푸푸시 푸시
+        // 사본부쉬쓰
         welcomeText.setText("Welcome to JavaFX Application!");
     }
 }
