@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="547.0" prefWidth="1102.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.itgroup.controller.CompanyInfocontroller">
+   <top>
+      <AnchorPane prefHeight="120.0" prefWidth="745.0">
+         <children>
+            <Button alignment="CENTER" cancelButton="false" contentDisplay="CENTER" defaultButton="false" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#onInsert" prefHeight="27.0" prefWidth="100.0" text="등록" textAlignment="CENTER" textOverrun="ELLIPSIS" underline="false" visible="true" wrapText="false" />
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="14.0" mnemonicParsing="false" onAction="#onUpdate" prefHeight="27.0" prefWidth="100.0" text="수정" />
+            <Button alignment="CENTER" contentDisplay="TOP" layoutX="298.0" layoutY="14.0" mnemonicParsing="false" onAction="#onDelete" prefHeight="27.0" prefWidth="100.0" text="삭제" />
+            <Button fx:id="btnSaveFile" alignment="CENTER" contentDisplay="CENTER" layoutX="446.0" layoutY="14.0" mnemonicParsing="false" onAction="#onSaveFile" prefHeight="27.0" prefWidth="100.0" text=" 파일로 저장" />
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="586.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClosing" prefHeight="27.0" prefWidth="100.0" text="종료" />
+            <Label layoutX="148.0" layoutY="62.0" text="출력 모드 선택 :" />
+            <ComboBox fx:id="fieldSearch" layoutX="251.0" layoutY="59.0" onAction="#choiceSelect">
+               <items>
+                  <FXCollections fx:factory="observableArrayList">
+                     <String fx:value="전체 보기" />
+                     <String fx:value="대기업" />
+                     <String fx:value="중견기업" />
+                     <String fx:value="중소기업" />
+                     <String fx:value="벤처기업" />
+                  </FXCollections>
+               </items>
+            </ComboBox>
+            <Label layoutX="358.0" layoutY="62.0" text="현재 모드 : " />
+            <Label fx:id="lblChoice" layoutX="436.0" layoutY="62.0" text="mode" />
+            <Label id="lblChoice" fx:id="pageStatus" layoutX="618.0" layoutY="63.0" text="pagingStatus" />
+            <Label fx:id="fxLabelTalent" layoutX="730.0" layoutY="15.0" prefHeight="90.0" prefWidth="350.0" text="인재상" wrapText="true" />
+
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <VBox prefHeight="373.0" prefWidth="690.0">
+         <TableView fx:id="companyTable" prefHeight="355.0" prefWidth="690.0">
+            <columns>
+               <TableColumn prefWidth="110.0" text="Column X" />
+               <TableColumn prefWidth="110.0" text="Column X" />
+               <TableColumn prefWidth="110.0" text="Column X" />
+               <TableColumn prefWidth="110.0" text="Column X" />
+               <TableColumn prefWidth="110.0" text="Column X" />
+
+            </columns>
+         </TableView>
+         <Pagination fx:id="pagination" currentPageIndex="1" minHeight="62.0" pageCount="10" prefWidth="745.0" />
+      </VBox>
+   </center>
+   <right>
+      <AnchorPane prefHeight="350.0" prefWidth="350.0">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="350.0" fitWidth="350.0" layoutX="70.0" layoutY="-2.0"
+                       pickOnBounds="true" preserveRatio="false">
+               <image>
+
+               </image>
+
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </AnchorPane>
+   </right>
+</BorderPane>
