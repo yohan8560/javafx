@@ -9,7 +9,8 @@ public class HelloController {
 
     @FXML
     protected void onHelloButtonClick() {
-        // 오늘은 날씨가 너무 너무 더웡진짜 로
+        // 오늘은 날씨가 너무 너무 더웡진짜로
+        // 오늘 점심은 부대찌개 먹을꺼얌
         welcomeText.setText("Welcome to JavaFX Application!");
     }
 }
